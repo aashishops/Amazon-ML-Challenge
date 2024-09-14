@@ -21,7 +21,16 @@ for index, row in df.iterrows():
     else:
         image_text_dict[base_image_name] = predicted_word
 
-# Print the results
+# Print the results and prepare them for the new CSV
+output_data = []
 for image_name, combined_text in image_text_dict.items():
     print(f"Image: {image_name}.jpg")
     print(f"Combined Text: {combined_text}\n")
+    output_data.append([f"{image_name}.jpg", combined_text])
+
+# Save the results to a new CSV file
+output_df = pd.DataFrame(output_data, columns=["image_name", "combined_text"])
+output_file = "combined_predicted_words.csv"  # Path to save the new CSV file
+output_df.to_csv(output_file, index=False)
+
+print(f"Combined words saved to {output_file}")

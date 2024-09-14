@@ -15,3 +15,7 @@ run CRAFT-pytorch/crop_images.py
 For Deep Text REcognition prompt Command :(Windows)
 
 python deep-text-recognition-benchmark/demo.py --Transformation None --FeatureExtraction VGG --SequenceModeling BiLSTM --Prediction CTC --image_folder CropWords --saved_model None-VGG-BiLSTM-CTC.pth
+
+For Joining all the extracted words of a image and saving it into a CSV file:
+
+python Cropped_Image_words_Join_Utility.py
