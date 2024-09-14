@@ -7,7 +7,7 @@ import cv2
 
 df = pd.read_csv('student_resource3/dataset/train.csv')
 
-
+df = df.head(50)
 # Empty list to store results
 results = []
 
