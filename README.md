@@ -1,3 +1,19 @@
+Consider using virtual environment to avoid conflicts (but you would have to reinstall even the packages that you already have, again, don't do this in <u>hostel wifi</u>)
+```
+python3 -m venv amazon
+source amazon/bin/activate
+```
+
+To exit the virtual environment,
+```
+deactivate
+```
+
+Requirements files are in the CRAFT and deep-text folders
+```
+pip install -r requirements.txt
+```
+
 `trial.ipynb` to download small_sample
 
 For Link Refiner cmd prompt (Windows):
