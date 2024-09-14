@@ -14,7 +14,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 def demo(opt):
     """Open CSV file where predicted words will be saved."""
-    data = pd.read_csv(r'E:/College/Hackathon/Amazon ML Challenge/CRAFT/Amazon-ML-Challenge/CRAFT-pytorch/data.csv')
+    data = pd.read_csv('data.csv')
 
     """ Model configuration """
     if 'CTC' in opt.Prediction:
@@ -78,7 +78,7 @@ def demo(opt):
             preds_max_prob, _ = preds_prob.max(dim=2)
 
             for img_name, pred, pred_max_prob in zip(image_path_list, preds_str, preds_max_prob):
-                start = r'E:/College/Hackathon/Amazon ML Challenge/CRAFT/Amazon-ML-Challenge/CropWords'  # Path to cropped words
+                start = './CropWords/'  # Path to cropped words
                 path = os.path.relpath(img_name, start)
                 folder = os.path.dirname(path)
                 image_name = os.path.basename(path)

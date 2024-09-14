@@ -61,7 +61,7 @@ csv_path = 'data.csv'
 test_images_path = 'small_sample/'
 
 # Directory where cropped images will be saved
-output_dir = 'E:/College/Hackathon/Amazon ML Challenge/CRAFT/Amazon-ML-Challenge/CropWords'
+output_dir = './CropWords/'
 
 # Read CSV
 data = pd.read_csv(csv_path)
