@@ -156,9 +156,9 @@ if __name__ == '__main__':
             print(f"Error saving result image: {e}")
 
         # Display the image using OpenCV
-        cv2.imshow('Detected Image', image)
-        cv2.waitKey(0)
-        cv2.destroyAllWindows()
+        # cv2.imshow('Detected Image', image)
+        # cv2.waitKey(0)
+        # cv2.destroyAllWindows()
 
     data.to_csv('data.csv', sep=',', na_rep='Unknown')
     print("Elapsed time: {}s".format(time.time() - t))
