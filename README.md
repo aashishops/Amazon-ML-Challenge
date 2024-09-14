@@ -22,4 +22,6 @@ python deep-text-recognition-benchmark/demo.py --Transformation None --FeatureEx
 
 # Archive:
 Traditional way:
+```
 python3 CRAFT-pytorch/test.py --trained_model=craft_mlt_25k.pth --test_folder=small_sample --cuda=False
+```
