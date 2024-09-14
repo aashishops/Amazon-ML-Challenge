@@ -1,3 +1,6 @@
+Pro Tip before you start: 
+https://youtu.be/dvUvajxnnq4
+
 Consider using virtual environment to avoid conflicts (but you would have to reinstall even the packages that you already have, again, don't do this in <u>hostel wifi</u>)
 ```
 python3 -m venv amazon
