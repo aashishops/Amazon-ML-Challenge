@@ -4,3 +4,5 @@ result
 log_demo_result.txt
 Crop Words
 CropWords
+CRAFT-pytorch/data.csv
+predicted_words.csv

@@ -57,7 +57,7 @@ start = args.test_folder
 for num in range(len(image_list)):
     image_names.append(os.path.relpath(image_list[num], start))
 
-result_folder = './result'
+result_folder = './result/'
 if not os.path.isdir(result_folder):
     print(f"Creating result folder: {result_folder}")
     os.mkdir(result_folder)
