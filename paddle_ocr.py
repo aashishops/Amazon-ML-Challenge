@@ -10,10 +10,10 @@ from paddleocr import PaddleOCR
 ocr = PaddleOCR(use_angle_cls=True, lang='en') 
 
 # Path to your CSV file
-csv_file_path = r'student_resource3\dataset\train.csv'
+csv_file_path = 'student_resource3/dataset/train.csv'
 
 # Output folder for the OCR processed images and CSV
-output_folder = r'E:\Career\hackathon\Amazon-ML-Challenge\paddle_ocr_output'
+output_folder = 'paddle_ocr_output'
 os.makedirs(output_folder, exist_ok=True)
 
 # Read the CSV (limit to 100 rows for this example)
@@ -44,7 +44,7 @@ for idx, row in df.iterrows():
 
             if result is not None:
                 # Open the image for drawing OCR results
-                draw = ImageDraw.Draw(img)
+                # draw = ImageDraw.Draw(img)
 
                 # Iterate over the OCR result and draw boxes with text
                 for res in result:
@@ -59,10 +59,10 @@ for idx, row in df.iterrows():
                             box = [tuple(coord) for coord in box]
 
                             # Draw the bounding box (use line for drawing the polygon)
-                            draw.line(box + [box[0]], fill='red', width=2)
+                            # draw.line(box + [box[0]], fill='red', width=2)
 
                             # Draw the text along with the confidence score
-                            draw.text((box[0][0], box[0][1] - 10), f'{text} ({score:.2f})', fill='red')
+                            # draw.text((box[0][0], box[0][1] - 10), f'{text} ({score:.2f})', fill='red')
 
                             # Save OCR results in the list
                             ocr_data.append({
@@ -75,8 +75,8 @@ for idx, row in df.iterrows():
                             })
 
                 # Save only the OCR-processed image with bounding boxes and labels
-                output_image_path = os.path.join(output_folder, f'{group_id}_paddleocr.jpg')
-                img.save(output_image_path)
+                # output_image_path = os.path.join(output_folder, f'{group_id}_paddleocr.jpg')
+                # img.save(output_image_path)
 
     except Exception as e:
         print(f"Error processing image {img_url}: {e}")

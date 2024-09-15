@@ -7,3 +7,4 @@ CropWords
 CRAFT-pytorch/data.csv
 predicted_words.csv
 data.csv
+paddle_ocr_output
